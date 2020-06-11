@@ -1,7 +1,5 @@
 import cpp
 
-from Function fn, FunctionCall fc
-where
-    fn.getName() = "memcpy" and
-    fc.getTarget() = fn
+from FunctionCall fc
+where fc.getTarget().getName() = "memcpy"
 select fc
